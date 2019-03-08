@@ -5,6 +5,7 @@ import './App.css';
 import SleeperBerthRow from './sleeper-berth-row/SleeperBerthRow';
 import DrivingRow from './driving-row/DrivingRow';
 import OnDutyRow from './on-duty-row/OnDutyRow';
+import RemarksRow from './remarks-row/RemarksRow';
 
 class App extends Component {
     render() {
@@ -26,8 +27,12 @@ class App extends Component {
                <div className="row-label">3. DRIVING</div>
                <DrivingRow clickedOn="Driving"></DrivingRow>    
 
-                              <div className="row-label">4. ON DUTY <br/> <span className="small">(NOT DRIVING)</span></div>
-               <OnDutyRow clickedOn="On Duty"></OnDutyRow>      
+                <div className="row-label">4. ON DUTY <br/> <span className="small">(NOT DRIVING)</span></div>
+               <OnDutyRow clickedOn="On Duty"></OnDutyRow>    
+
+               <HourLabels/>
+               <div className="row-label">REMARKS</div>  
+               <RemarksRow clickedOn="Remarks"></RemarksRow>
           </div>
         );
     }
